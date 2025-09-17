@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "about"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "point1": {
+      "type": "text"
+    },
+    "point2": {
+      "type": "text"
+    },
+    "point3": {
+      "type": "text"
+    }
+  }
+}

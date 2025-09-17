@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_service_service_cards",
+  "info": {
+    "displayName": "Service Card"
+  },
+  "options": {},
+  "attributes": {
+    "TItle": {
+      "type": "string"
+    },
+    "mainPoint": {
+      "type": "text"
+    },
+    "point": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "order": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}
