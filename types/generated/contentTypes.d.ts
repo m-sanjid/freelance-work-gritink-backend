@@ -495,6 +495,35 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHeroContentHeroContent extends Struct.SingleTypeSchema {
+  collectionName: 'hero_contents';
+  info: {
+    displayName: 'hero-content';
+    pluralName: 'hero-contents';
+    singularName: 'hero-content';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    button: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hero-content.hero-content'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.Blocks;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHeroVideoHeroVideo extends Struct.SingleTypeSchema {
   collectionName: 'hero_videos';
   info: {
@@ -1187,6 +1216,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::brand.brand': ApiBrandBrand;
       'api::career.career': ApiCareerCareer;
+      'api::hero-content.hero-content': ApiHeroContentHeroContent;
       'api::hero-video.hero-video': ApiHeroVideoHeroVideo;
       'api::project.project': ApiProjectProject;
       'api::service-section.service-section': ApiServiceSectionServiceSection;
