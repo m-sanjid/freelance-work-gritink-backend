@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "gritink_logos",
+  "info": {
+    "singularName": "gritink-logo",
+    "pluralName": "gritink-logos",
+    "displayName": "gritink-logo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
